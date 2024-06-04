@@ -3,7 +3,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class APICall {
-    //Set up to make API call for Ollama
+    //    Set up to make API call for Ollama
+    //    One-shot is used for single, isolated queries.
+    //    Chat maintains a conversation context.
+    //    Generate is used to produce responses based on a prompt.
+    //    Prompt is the input given to the model.
     public static void main(String[] args) {
         try {
             // URL for the generate API endpoint
