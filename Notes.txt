@@ -1,0 +1,42 @@
+Ollama REST API Overview
+
+If the Ollama REST API is running on port 11434 on localhost, it
+ means that you can access the API endpoints at http://localhost:11434.
+ This setup is typically used for local development and testing purposes,
+  allowing you to interact with the API on your local machine.
+Definitions
+One-shot
+
+"One-shot" refers to a single request-response interaction with the model.
+You send a single prompt, and the model returns a response. There is no conversation
+ context maintained between requests.
+Chat
+
+"Chat" involves maintaining a conversation context over multiple interactions.
+ The model keeps track of the previous messages in the conversation, allowing
+  for a more coherent and context-aware dialogue.
+Generate
+
+"Generate" is a command used to produce a response from the model based on a
+ provided prompt. It's similar to one-shot but might be used in a broader context
+  where the exact interaction pattern isn't strictly defined.
+Prompt
+
+A "prompt" is the input text you provide to the model to generate a response.
+ It can be a question, a statement, or any text that you want the model to respond to.
+
+ Used to generate a response from Ollama and worked, clowed my computer down a ton
+ curl http://localhost:11434/api/generate -d '{
+   "model": "llama3",
+   "prompt": "Why is the sky blue?"
+ }'
+
+ Used to create a chat with Ollama, havent tried yet
+ curl http://localhost:11434/api/chat -d '{
+   "model": "llama3",
+   "messages": [
+     { "role": "user", "content": "Why is the sky blue?" }
+   ]
+ }'
+
+ MAKE SURE THE MODELS USED ARE ABLE TO BE USED!!! CHECK THE OLLAMA API DOCS!!!!
