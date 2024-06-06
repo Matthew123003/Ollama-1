@@ -9,6 +9,7 @@ public class APICall {
     //    Generate is used to produce responses based on a prompt.
     //    Prompt is the input given to the model.
     //    API documentation missing, will come back to this
+    //    Link for Ollama documentation https://wiki.mutable.ai/ollama/ollama
     public static void main(String[] args) {
         try {
             // URL for the generate API endpoint
